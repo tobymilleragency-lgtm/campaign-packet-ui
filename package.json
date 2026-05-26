@@ -1,0 +1,28 @@
+{
+  "name": "campaign-packet-ui",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:web": "vite --host 127.0.0.1 --port 5178",
+    "dev:api": "node server/index.js",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5178",
+    "start": "node server/index.js",
+    "check": "npm run build && node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "express": "latest",
+    "cors": "latest",
+    "gray-matter": "latest",
+    "marked": "latest",
+    "concurrently": "latest"
+  },
+  "devDependencies": {}
+}
